@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-09-19 11:44:41 by mead-->
 <display version="2.0.0">
   <name>$(PriSys):$(PSC)</name>
   <width>960</width>
@@ -1907,6 +1906,7 @@ $(pv_value)</tooltip>
       <name>Action Button_31</name>
       <actions>
         <action type="open_display">
+          <description>Open Display</description>
           <file>zpsc_chan_unipolar.opi</file>
           <macros>
             <PriSys>lab</PriSys>
@@ -1914,7 +1914,6 @@ $(pv_value)</tooltip>
             <CHAN>Chan2</CHAN>
           </macros>
           <target>window</target>
-          <description>Open Display</description>
         </action>
       </actions>
       <text>Channel 2</text>
@@ -1931,6 +1930,7 @@ $(pv_value)</tooltip>
       <name>Action Button_32</name>
       <actions>
         <action type="open_display">
+          <description>Open Display</description>
           <file>zpsc_chan_unipolar.opi</file>
           <macros>
             <PriSys>lab</PriSys>
@@ -1938,7 +1938,6 @@ $(pv_value)</tooltip>
             <CHAN>Chan1</CHAN>
           </macros>
           <target>window</target>
-          <description>Open Display</description>
         </action>
       </actions>
       <text>Channel 1</text>
@@ -1958,5 +1957,63 @@ $(pv_value)</tooltip>
     <y>707</y>
     <width>1</width>
     <height>1</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_3</name>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <description>ch1-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_ON2-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch2-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_ON2-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch1-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_ON1-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch2-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_ON1-SP</pv_name>
+        <value>0</value>
+      </action>
+    </actions>
+    <text>ALL ENB OFF</text>
+    <x>37</x>
+    <y>540</y>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_4</name>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <description>ch1-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_ON2-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch2-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_ON2-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch1-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_ON1-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch2-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_ON1-SP</pv_name>
+        <value>1</value>
+      </action>
+    </actions>
+    <text>ALL ENB ON</text>
+    <x>158</x>
+    <y>540</y>
+    <tooltip>$(actions)</tooltip>
   </widget>
 </display>

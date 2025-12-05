@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-09-19 11:13:54 by mead-->
 <display version="2.0.0">
   <name>$(PriSys):$(PSC)</name>
   <width>960</width>
@@ -1220,7 +1219,7 @@ $(pv_value)</tooltip>
     <x>24</x>
     <y>418</y>
     <width>906</width>
-    <height>170</height>
+    <height>182</height>
     <style>1</style>
     <foreground_color>
       <color name="TabBG" red="224" green="255" blue="255">
@@ -2333,14 +2332,14 @@ $(pv_value)</tooltip>
       <name>Action Button_30</name>
       <actions>
         <action type="open_display">
+          <description>Open Display</description>
           <file>zpsc_chan_bipolar.opi</file>
           <macros>
             <PriSys>lab</PriSys>
             <PSC>$(PSC)</PSC>
             <CHAN>Chan1</CHAN>
           </macros>
-          <target>window</target>
-          <description>Open Display</description>
+          <target>tab</target>
         </action>
       </actions>
       <text>Channel 1</text>
@@ -2357,14 +2356,14 @@ $(pv_value)</tooltip>
       <name>Action Button_31</name>
       <actions>
         <action type="open_display">
+          <description>Open Display</description>
           <file>zpsc_chan_bipolar.opi</file>
           <macros>
             <PriSys>lab</PriSys>
             <PSC>$(PSC)</PSC>
             <CHAN>Chan2</CHAN>
           </macros>
-          <target>window</target>
-          <description>Open Display</description>
+          <target>tab</target>
         </action>
       </actions>
       <text>Channel 2</text>
@@ -2381,14 +2380,14 @@ $(pv_value)</tooltip>
       <name>Action Button_32</name>
       <actions>
         <action type="open_display">
+          <description>Open Display</description>
           <file>zpsc_chan_bipolar.opi</file>
           <macros>
             <PriSys>lab</PriSys>
             <PSC>$(PSC)</PSC>
             <CHAN>Chan3</CHAN>
           </macros>
-          <target>window</target>
-          <description>Open Display</description>
+          <target>tab</target>
         </action>
       </actions>
       <text>Channel 3</text>
@@ -2405,14 +2404,14 @@ $(pv_value)</tooltip>
       <name>Action Button_33</name>
       <actions>
         <action type="open_display">
+          <description>Open Display</description>
           <file>zpsc_chan_bipolar.opi</file>
           <macros>
             <PriSys>lab</PriSys>
             <PSC>$(PSC)</PSC>
             <CHAN>Chan4</CHAN>
           </macros>
-          <target>window</target>
-          <description>Open Display</description>
+          <target>tab</target>
         </action>
       </actions>
       <text>Channel 4</text>
@@ -2866,5 +2865,103 @@ $(pv_value)</tooltip>
         </color>
       </border_color>
     </widget>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <description>ch1-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_ON2-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch2-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_ON2-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch3-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan3:DigOut_ON2-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch4-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan4:DigOut_ON2-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch1-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_ON1-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch2-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_ON1-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch3-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan3:DigOut_ON1-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch4-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan4:DigOut_ON1-SP</pv_name>
+        <value>1</value>
+      </action>
+    </actions>
+    <text>ALL ENB ON</text>
+    <x>145</x>
+    <y>571</y>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_3</name>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <description>ch1-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_ON2-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch2-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_ON2-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch3-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan3:DigOut_ON2-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch4-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan4:DigOut_ON2-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch1-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_ON1-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch2-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_ON1-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch3-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan3:DigOut_ON1-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch4-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan4:DigOut_ON1-SP</pv_name>
+        <value>0</value>
+      </action>
+    </actions>
+    <text>ALL ENB OFF</text>
+    <x>24</x>
+    <y>571</y>
+    <tooltip>$(actions)</tooltip>
   </widget>
 </display>

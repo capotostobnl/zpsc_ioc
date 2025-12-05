@@ -1,0 +1,3076 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>$(CHAN):$(PriSys)</name>
+  <width>1700</width>
+  <height>900</height>
+  <background_color>
+    <color red="200" green="215" blue="255">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>6</grid_step_x>
+  <grid_step_y>6</grid_step_y>
+  <widget type="label" version="2.0.0">
+    <name>Text Input_2</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <text>${PSC}</text>
+    <x>1620</x>
+    <y>72</y>
+    <width>58</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="OpTitleBG" red="175" green="238" blue="175">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Text Input</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <text>${PriSys}</text>
+    <x>1639</x>
+    <y>41</y>
+    <width>58</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="OpTitleBG" red="175" green="238" blue="175">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="symbol" version="2.0.0">
+    <name>Symbol</name>
+    <x>959</x>
+    <y>416</y>
+    <width>1</width>
+    <height>1</height>
+    <tooltip>$(pv_name)
+$(pv_value)
+$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_32</name>
+    <x>1350</x>
+    <y>984</y>
+    <width>1</width>
+    <height>1</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group</name>
+    <macros>
+      <CHAN>Chan1</CHAN>
+    </macros>
+    <x>36</x>
+    <y>37</y>
+    <width>348</width>
+    <height>920</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_68</name>
+      <y>745</y>
+      <width>340</width>
+      <height>175</height>
+      <title>Regulator</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):Reg-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_64</name>
+      <y>187</y>
+      <width>340</width>
+      <height>175</height>
+      <title>DCCT1</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):DCCT1-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_66</name>
+      <width>340</width>
+      <height>175</height>
+      <title>DAC Loop Back</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):DAC-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_65</name>
+      <y>373</y>
+      <width>340</width>
+      <height>175</height>
+      <title>DCCT2</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):DCCT2-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_69</name>
+      <y>559</y>
+      <width>340</width>
+      <height>175</height>
+      <title>Error</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):Error-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group_1</name>
+    <macros>
+      <CHAN>Chan2</CHAN>
+    </macros>
+    <x>396</x>
+    <y>37</y>
+    <width>348</width>
+    <height>920</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_77</name>
+      <y>745</y>
+      <width>340</width>
+      <height>175</height>
+      <title>Regulator</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):Reg-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_78</name>
+      <y>187</y>
+      <width>340</width>
+      <height>175</height>
+      <title>DCCT1</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):DCCT1-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_79</name>
+      <width>340</width>
+      <height>175</height>
+      <title>DAC Loop Back</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):DAC-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_80</name>
+      <y>373</y>
+      <width>340</width>
+      <height>175</height>
+      <title>DCCT2</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):DCCT2-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_81</name>
+      <y>559</y>
+      <width>340</width>
+      <height>175</height>
+      <title>Error</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):Error-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group_2</name>
+    <macros>
+      <CHAN>Chan3</CHAN>
+    </macros>
+    <x>756</x>
+    <y>37</y>
+    <width>348</width>
+    <height>920</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_82</name>
+      <y>745</y>
+      <width>340</width>
+      <height>175</height>
+      <title>Regulator</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):Reg-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_83</name>
+      <y>187</y>
+      <width>340</width>
+      <height>175</height>
+      <title>DCCT1</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):DCCT1-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_84</name>
+      <width>340</width>
+      <height>175</height>
+      <title>DAC Loop Back</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):DAC-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_85</name>
+      <y>373</y>
+      <width>340</width>
+      <height>175</height>
+      <title>DCCT2</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):DCCT2-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_86</name>
+      <y>559</y>
+      <width>340</width>
+      <height>175</height>
+      <title>Error</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):Error-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group_3</name>
+    <macros>
+      <CHAN>Chan4</CHAN>
+    </macros>
+    <x>1116</x>
+    <y>37</y>
+    <width>348</width>
+    <height>920</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_87</name>
+      <y>745</y>
+      <width>340</width>
+      <height>175</height>
+      <title>Regulator</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):Reg-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_88</name>
+      <y>187</y>
+      <width>340</width>
+      <height>175</height>
+      <title>DCCT1</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):DCCT1-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_89</name>
+      <width>340</width>
+      <height>175</height>
+      <title>DAC Loop Back</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):DAC-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_90</name>
+      <y>373</y>
+      <width>340</width>
+      <height>175</height>
+      <title>DCCT2</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):DCCT2-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_91</name>
+      <y>559</y>
+      <width>340</width>
+      <height>175</height>
+      <title>Error</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(PriSys){$(PSC)}$(CHAN):Error-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_3</name>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <description>ch1-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_ON2-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch2-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_ON2-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch3-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan3:DigOut_ON2-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch4-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan4:DigOut_ON2-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch1-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_ON1-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch2-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_ON1-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch3-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan3:DigOut_ON1-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch4-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan4:DigOut_ON1-SP</pv_name>
+        <value>0</value>
+      </action>
+    </actions>
+    <text>ALL ENB OFF</text>
+    <x>1476</x>
+    <y>11</y>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_4</name>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <description>ch1-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_ON2-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch2-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_ON2-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch3-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan3:DigOut_ON2-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch4-on2</description>
+        <pv_name>$(PriSys){$(PSC)}Chan4:DigOut_ON2-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch1-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_ON1-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch2-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_ON1-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch3-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan3:DigOut_ON1-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch4-on1</description>
+        <pv_name>$(PriSys){$(PSC)}Chan4:DigOut_ON1-SP</pv_name>
+        <value>1</value>
+      </action>
+    </actions>
+    <text>ALL ENB ON</text>
+    <x>1476</x>
+    <y>52</y>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group_7</name>
+    <x>1476</x>
+    <y>326</y>
+    <width>102</width>
+    <height>166</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_258</name>
+      <text>Current Control
+SetPoint (A)
+Chan 2</text>
+      <width>101</width>
+      <height>54</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input_43</name>
+      <pv_name>$(PriSys){$(PSC)}Chan2:DAC_SetPt-SP</pv_name>
+      <y>54</y>
+      <width>90</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>5</precision>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box_1</name>
+      <pv_name>$(PriSys){$(PSC)}Chan2:DAC_OpMode-SP</pv_name>
+      <x>12</x>
+      <y>74</y>
+      <width>85</width>
+      <height>20</height>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input_44</name>
+      <pv_name>$(PriSys){$(PSC)}Chan2:TenHzBufLen-SP</pv_name>
+      <y>134</y>
+      <width>90</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>0</precision>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_281</name>
+      <text>Buffer Length</text>
+      <y>104</y>
+      <width>101</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group_8</name>
+    <x>1476</x>
+    <y>534</y>
+    <width>102</width>
+    <height>166</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box_2</name>
+      <pv_name>$(PriSys){$(PSC)}Chan3:DAC_OpMode-SP</pv_name>
+      <y>92</y>
+      <width>85</width>
+      <height>20</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_282</name>
+      <text>Current Control
+SetPoint (A)
+Chan 3</text>
+      <width>101</width>
+      <height>54</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input_45</name>
+      <pv_name>$(PriSys){$(PSC)}Chan3:DAC_SetPt-SP</pv_name>
+      <y>54</y>
+      <width>90</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>5</precision>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input_46</name>
+      <pv_name>$(PriSys){$(PSC)}Chan3:TenHzBufLen-SP</pv_name>
+      <y>146</y>
+      <width>90</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>0</precision>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_283</name>
+      <text>Buffer Length</text>
+      <y>126</y>
+      <width>101</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_45</name>
+    <text>PriSys</text>
+    <x>1576</x>
+    <y>41</y>
+    <width>50</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_46</name>
+    <text>PSC</text>
+    <x>1561</x>
+    <y>72</y>
+    <width>78</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_67</name>
+    <pv_name>$(PriSys){$(PSC)}Chan1:FaultsLat-I</pv_name>
+    <x>1648</x>
+    <y>144</y>
+    <width>50</width>
+    <height>21</height>
+    <on_color>
+      <color red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_68</name>
+    <pv_name>$(PriSys){$(PSC)}Chan2:FaultsLat-I</pv_name>
+    <x>1648</x>
+    <y>346</y>
+    <width>50</width>
+    <height>21</height>
+    <on_color>
+      <color red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_69</name>
+    <pv_name>$(PriSys){$(PSC)}Chan3:FaultsLat-I</pv_name>
+    <x>1648</x>
+    <y>554</y>
+    <width>50</width>
+    <height>21</height>
+    <on_color>
+      <color red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_171</name>
+    <text>Sum Flt</text>
+    <x>1645</x>
+    <y>120</y>
+    <width>50</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_172</name>
+    <text>On</text>
+    <x>1590</x>
+    <y>120</y>
+    <width>55</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_71</name>
+    <pv_name>$(PriSys){$(PSC)}Chan1:DigIn-I.B0</pv_name>
+    <x>1591</x>
+    <y>144</y>
+    <width>50</width>
+    <height>21</height>
+    <off_color>
+      <color red="0" green="95" blue="0">
+      </color>
+    </off_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_72</name>
+    <pv_name>$(PriSys){$(PSC)}Chan2:DigIn-I.B0</pv_name>
+    <x>1591</x>
+    <y>346</y>
+    <width>50</width>
+    <height>21</height>
+    <off_color>
+      <color red="0" green="95" blue="0">
+      </color>
+    </off_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_73</name>
+    <pv_name>$(PriSys){$(PSC)}Chan3:DigIn-I.B0</pv_name>
+    <x>1593</x>
+    <y>554</y>
+    <width>50</width>
+    <height>21</height>
+    <off_color>
+      <color red="0" green="95" blue="0">
+      </color>
+    </off_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_173</name>
+    <text>Sum Flt</text>
+    <x>1646</x>
+    <y>326</y>
+    <width>50</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_174</name>
+    <text>On</text>
+    <x>1591</x>
+    <y>326</y>
+    <width>55</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_175</name>
+    <text>Sum Flt</text>
+    <x>1648</x>
+    <y>534</y>
+    <width>50</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_176</name>
+    <text>On</text>
+    <x>1593</x>
+    <y>534</y>
+    <width>55</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_179</name>
+    <text>Rst</text>
+    <x>1591</x>
+    <y>218</y>
+    <width>41</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_180</name>
+    <text>Park</text>
+    <x>1646</x>
+    <y>218</y>
+    <width>50</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_11</name>
+    <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_Reset-SP</pv_name>
+    <x>1591</x>
+    <y>238</y>
+    <width>50</width>
+    <height>21</height>
+    <off_label></off_label>
+    <on_label></on_label>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_13</name>
+    <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_Park-SP</pv_name>
+    <x>1646</x>
+    <y>238</y>
+    <width>50</width>
+    <height>21</height>
+    <off_label></off_label>
+    <on_label></on_label>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_15</name>
+    <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_Reset-SP</pv_name>
+    <x>1593</x>
+    <y>428</y>
+    <width>50</width>
+    <height>21</height>
+    <off_label></off_label>
+    <on_label></on_label>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_17</name>
+    <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_Park-SP</pv_name>
+    <x>1648</x>
+    <y>428</y>
+    <width>50</width>
+    <height>21</height>
+    <off_label></off_label>
+    <on_label></on_label>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_27</name>
+    <pv_name>$(PriSys){$(PSC)}Chan3:DigOut_Reset-SP</pv_name>
+    <x>1593</x>
+    <y>636</y>
+    <width>50</width>
+    <height>21</height>
+    <off_label></off_label>
+    <on_label></on_label>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_29</name>
+    <pv_name>$(PriSys){$(PSC)}Chan3:DigOut_Park-SP</pv_name>
+    <x>1648</x>
+    <y>636</y>
+    <width>50</width>
+    <height>21</height>
+    <off_label></off_label>
+    <on_label></on_label>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_181</name>
+    <text>Rst</text>
+    <x>1591</x>
+    <y>408</y>
+    <width>41</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_182</name>
+    <text>Park</text>
+    <x>1641</x>
+    <y>408</y>
+    <width>50</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_183</name>
+    <text>Rst</text>
+    <x>1593</x>
+    <y>616</y>
+    <width>41</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_184</name>
+    <text>Park</text>
+    <x>1643</x>
+    <y>616</y>
+    <width>50</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_187</name>
+    <text>Pwr</text>
+    <x>1594</x>
+    <y>174</y>
+    <width>43</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_188</name>
+    <text>Enb</text>
+    <x>1648</x>
+    <y>174</y>
+    <width>46</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_34</name>
+    <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_ON2-SP</pv_name>
+    <x>1646</x>
+    <y>197</y>
+    <width>50</width>
+    <height>21</height>
+    <off_label></off_label>
+    <on_label></on_label>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_35</name>
+    <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_ON1-SP</pv_name>
+    <x>1591</x>
+    <y>197</y>
+    <width>50</width>
+    <height>21</height>
+    <off_label></off_label>
+    <on_label></on_label>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_38</name>
+    <pv_name>$(PriSys){$(PSC)}Chan3:DigOut_ON2-SP</pv_name>
+    <x>1648</x>
+    <y>595</y>
+    <width>50</width>
+    <height>21</height>
+    <off_label></off_label>
+    <on_label></on_label>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_39</name>
+    <pv_name>$(PriSys){$(PSC)}Chan3:DigOut_ON1-SP</pv_name>
+    <x>1593</x>
+    <y>595</y>
+    <width>50</width>
+    <height>21</height>
+    <off_label></off_label>
+    <on_label></on_label>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_189</name>
+    <text>Enb</text>
+    <x>1645</x>
+    <y>367</y>
+    <width>46</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_190</name>
+    <text>Pwr</text>
+    <x>1591</x>
+    <y>367</y>
+    <width>43</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_191</name>
+    <text>Enb</text>
+    <x>1647</x>
+    <y>575</y>
+    <width>46</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_192</name>
+    <text>Pwr</text>
+    <x>1593</x>
+    <y>575</y>
+    <width>43</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_44</name>
+    <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_ON1-SP</pv_name>
+    <x>1591</x>
+    <y>387</y>
+    <width>50</width>
+    <height>21</height>
+    <off_label></off_label>
+    <on_label></on_label>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_45</name>
+    <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_ON2-SP</pv_name>
+    <x>1646</x>
+    <y>387</y>
+    <width>50</width>
+    <height>21</height>
+    <off_label></off_label>
+    <on_label></on_label>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_39</name>
+    <actions>
+      <action type="open_display">
+        <description>Open Display</description>
+        <file>zpsc_chan_bipolar.opi</file>
+        <macros>
+          <PriSys>lab</PriSys>
+          <PSC>$(PSC)</PSC>
+          <CHAN>Chan1</CHAN>
+        </macros>
+        <target>tab</target>
+      </action>
+    </actions>
+    <text>Channel 1</text>
+    <x>1591</x>
+    <y>266</y>
+    <font>
+      <font name="Header1" family="Sans" style="BOLD" size="9.900990099009901">
+      </font>
+    </font>
+    <tooltip>$(actions)</tooltip>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_40</name>
+    <actions>
+      <action type="open_display">
+        <description>Open Display</description>
+        <file>zpsc_chan_bipolar.opi</file>
+        <macros>
+          <PriSys>lab</PriSys>
+          <PSC>$(PSC)</PSC>
+          <CHAN>Chan2</CHAN>
+        </macros>
+        <target>tab</target>
+      </action>
+    </actions>
+    <text>Channel 2</text>
+    <x>1593</x>
+    <y>462</y>
+    <font>
+      <font name="Header1" family="Sans" style="BOLD" size="9.900990099009901">
+      </font>
+    </font>
+    <tooltip>$(actions)</tooltip>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_41</name>
+    <actions>
+      <action type="open_display">
+        <description>Open Display</description>
+        <file>zpsc_chan_bipolar.opi</file>
+        <macros>
+          <PriSys>lab</PriSys>
+          <PSC>$(PSC)</PSC>
+          <CHAN>Chan3</CHAN>
+        </macros>
+        <target>tab</target>
+      </action>
+    </actions>
+    <text>Channel 3</text>
+    <x>1593</x>
+    <y>680</y>
+    <font>
+      <font name="Header1" family="Sans" style="BOLD" size="9.900990099009901">
+      </font>
+    </font>
+    <tooltip>$(actions)</tooltip>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group</name>
+    <x>1476</x>
+    <y>96</y>
+    <width>234</width>
+    <height>209</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="group" version="3.0.0">
+      <name>Channel 1</name>
+      <width>234</width>
+      <height>209</height>
+      <style>1</style>
+      <foreground_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </foreground_color>
+      <line_color>
+        <color red="65" green="105" blue="225">
+        </color>
+      </line_color>
+      <transparent>true</transparent>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Group</name>
+      <y>24</y>
+      <width>102</width>
+      <height>166</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="combo" version="2.0.0">
+        <name>Combo Box</name>
+        <pv_name>$(PriSys){$(PSC)}Chan1:DAC_OpMode-SP</pv_name>
+        <y>92</y>
+        <width>85</width>
+        <height>20</height>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_254</name>
+        <text>Current Control
+SetPoint (A)
+Chan 1</text>
+        <width>101</width>
+        <height>54</height>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Input_37</name>
+        <pv_name>$(PriSys){$(PSC)}Chan1:DAC_SetPt-SP</pv_name>
+        <y>54</y>
+        <width>90</width>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <background_color>
+          <color red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <precision>5</precision>
+        <show_units>false</show_units>
+        <horizontal_alignment>1</horizontal_alignment>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Input_38</name>
+        <pv_name>$(PriSys){$(PSC)}Chan2:TenHzBufLen-SP</pv_name>
+        <y>146</y>
+        <width>90</width>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <background_color>
+          <color red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <precision>0</precision>
+        <show_units>false</show_units>
+        <horizontal_alignment>1</horizontal_alignment>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_280</name>
+        <text>Buffer Length</text>
+        <y>126</y>
+        <width>101</width>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Channel 2</name>
+    <x>1476</x>
+    <y>305</y>
+    <width>234</width>
+    <height>209</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Channel 3</name>
+    <x>1476</x>
+    <y>514</y>
+    <width>234</width>
+    <height>209</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Channel 4</name>
+    <x>1476</x>
+    <y>723</y>
+    <width>234</width>
+    <height>209</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+    <widget type="bool_button" version="2.0.0">
+      <name>Boolean Button_31</name>
+      <pv_name>$(PriSys){$(PSC)}Chan4:DigOut_Reset-SP</pv_name>
+      <x>118</x>
+      <y>114</y>
+      <width>50</width>
+      <height>21</height>
+      <off_label></off_label>
+      <on_label></on_label>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>Boolean Button_33</name>
+      <pv_name>$(PriSys){$(PSC)}Chan4:DigOut_Park-SP</pv_name>
+      <x>173</x>
+      <y>114</y>
+      <width>50</width>
+      <height>21</height>
+      <off_label></off_label>
+      <on_label></on_label>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_185</name>
+      <text>Rst</text>
+      <x>118</x>
+      <y>94</y>
+      <width>41</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_186</name>
+      <text>Park</text>
+      <x>168</x>
+      <y>94</y>
+      <width>50</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>Boolean Button_40</name>
+      <pv_name>$(PriSys){$(PSC)}Chan4:DigOut_ON1-SP</pv_name>
+      <x>118</x>
+      <y>73</y>
+      <width>50</width>
+      <height>21</height>
+      <off_label></off_label>
+      <on_label></on_label>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>Boolean Button_41</name>
+      <pv_name>$(PriSys){$(PSC)}Chan4:DigOut_ON2-SP</pv_name>
+      <x>173</x>
+      <y>73</y>
+      <width>50</width>
+      <height>21</height>
+      <off_label></off_label>
+      <on_label></on_label>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_193</name>
+      <text>Enb</text>
+      <x>172</x>
+      <y>53</y>
+      <width>46</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_194</name>
+      <text>Pwr</text>
+      <x>118</x>
+      <y>53</y>
+      <width>43</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_42</name>
+      <actions>
+        <action type="open_display">
+          <description>Open Display</description>
+          <file>zpsc_chan_bipolar.opi</file>
+          <macros>
+            <PriSys>lab</PriSys>
+            <PSC>$(PSC)</PSC>
+            <CHAN>Chan4</CHAN>
+          </macros>
+          <target>tab</target>
+        </action>
+      </actions>
+      <text>Channel 4</text>
+      <x>118</x>
+      <y>148</y>
+      <font>
+        <font name="Header1" family="Sans" style="BOLD" size="9.900990099009901">
+        </font>
+      </font>
+      <tooltip>$(actions)</tooltip>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Group_9</name>
+      <y>2</y>
+      <width>102</width>
+      <height>166</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="combo" version="2.0.0">
+        <name>Combo Box_3</name>
+        <pv_name>$(PriSys){$(PSC)}Chan4:DAC_OpMode-SP</pv_name>
+        <y>92</y>
+        <width>85</width>
+        <height>20</height>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_284</name>
+        <text>Current Control
+SetPoint (A)
+Chan 4</text>
+        <width>101</width>
+        <height>54</height>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Input_47</name>
+        <pv_name>$(PriSys){$(PSC)}Chan4:DAC_SetPt-SP</pv_name>
+        <y>54</y>
+        <width>90</width>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <background_color>
+          <color red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <precision>5</precision>
+        <show_units>false</show_units>
+        <horizontal_alignment>1</horizontal_alignment>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Input_48</name>
+        <pv_name>$(PriSys){$(PSC)}Chan4:TenHzBufLen-SP</pv_name>
+        <y>146</y>
+        <width>90</width>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <background_color>
+          <color red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <precision>0</precision>
+        <show_units>false</show_units>
+        <horizontal_alignment>1</horizontal_alignment>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_285</name>
+        <text>Buffer Length</text>
+        <y>126</y>
+        <width>101</width>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_70</name>
+      <pv_name>$(PriSys){$(PSC)}Chan4:FaultsLat-I</pv_name>
+      <x>173</x>
+      <y>32</y>
+      <width>50</width>
+      <height>21</height>
+      <on_color>
+        <color red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <line_color>
+        <color red="150" green="150" blue="150">
+        </color>
+      </line_color>
+      <square>true</square>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_74</name>
+      <pv_name>$(PriSys){$(PSC)}Chan4:DigIn-I.B0</pv_name>
+      <x>118</x>
+      <y>32</y>
+      <width>50</width>
+      <height>21</height>
+      <off_color>
+        <color red="0" green="95" blue="0">
+        </color>
+      </off_color>
+      <foreground_color>
+        <color red="192" green="192" blue="192">
+        </color>
+      </foreground_color>
+      <line_color>
+        <color red="150" green="150" blue="150">
+        </color>
+      </line_color>
+      <square>true</square>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_177</name>
+      <text>Sum Flt</text>
+      <x>173</x>
+      <y>2</y>
+      <width>50</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_178</name>
+      <text>On</text>
+      <x>118</x>
+      <y>2</y>
+      <width>55</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Channel 1</name>
+    <x>36</x>
+    <y>11</y>
+    <width>348</width>
+    <height>946</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Channel 2</name>
+    <x>396</x>
+    <y>11</y>
+    <width>348</width>
+    <height>946</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Channel 3</name>
+    <x>756</x>
+    <y>11</y>
+    <width>348</width>
+    <height>946</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Channel 4</name>
+    <x>1116</x>
+    <y>11</y>
+    <width>348</width>
+    <height>946</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+</display>
