@@ -12,33 +12,6 @@
   <grid_step_x>6</grid_step_x>
   <grid_step_y>6</grid_step_y>
   <widget type="group" version="3.0.0">
-    <name>Channel 1</name>
-    <x>1476</x>
-    <y>96</y>
-    <width>302</width>
-    <height>209</height>
-    <style>1</style>
-    <foreground_color>
-      <color red="255" green="255" blue="255">
-      </color>
-    </foreground_color>
-    <line_color>
-      <color red="65" green="105" blue="225">
-      </color>
-    </line_color>
-    <transparent>true</transparent>
-    <widget type="bool_button" version="2.0.0">
-      <name>Boolean Button_8</name>
-      <pv_name>$(PriSys){$(PSC)}Chan1:FaultClear-SP</pv_name>
-      <x>233</x>
-      <y>29</y>
-      <width>48</width>
-      <height>21</height>
-      <off_label></off_label>
-      <on_label></on_label>
-    </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
     <name>Channel 2</name>
     <x>1476</x>
     <y>305</y>
@@ -64,92 +37,30 @@
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
-    <name>Group_7</name>
+    <name>Channel 1</name>
     <x>1476</x>
-    <y>326</y>
-    <width>102</width>
-    <height>166</height>
-    <style>3</style>
+    <y>96</y>
+    <width>302</width>
+    <height>209</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
     <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>Label_258</name>
-      <text>Current Control
-SetPoint (A)
-Chan 2</text>
-      <width>101</width>
-      <height>54</height>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Input_43</name>
-      <pv_name>$(PriSys){$(PSC)}Chan2:DAC_SetPt-SP</pv_name>
-      <y>54</y>
-      <width>90</width>
-      <font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <precision>5</precision>
-      <show_units>false</show_units>
-      <horizontal_alignment>1</horizontal_alignment>
-      <actions>
-      </actions>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Input_44</name>
-      <pv_name>$(PriSys){$(PSC)}Chan2:TenHzBufLen-SP</pv_name>
-      <y>134</y>
-      <width>90</width>
-      <font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <precision>0</precision>
-      <show_units>false</show_units>
-      <horizontal_alignment>1</horizontal_alignment>
-      <actions>
-      </actions>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_281</name>
-      <text>Buffer Length</text>
-      <y>104</y>
-      <width>101</width>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
+    <widget type="bool_button" version="2.0.0">
+      <name>Boolean Button_8</name>
+      <pv_name>$(PriSys){$(PSC)}Chan1:FaultClear-SP</pv_name>
+      <x>233</x>
+      <y>29</y>
+      <width>48</width>
+      <height>21</height>
+      <off_label></off_label>
+      <on_label></on_label>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -3104,30 +3015,6 @@ Chan 4</text>
     <tooltip>$(actions)</tooltip>
     <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_43</name>
-    <actions>
-      <action type="open_display">
-        <description>Open Display</description>
-        <file>zpsc_chan_bipolar.opi</file>
-        <macros>
-          <PriSys>lab</PriSys>
-          <PSC>$(PSC)</PSC>
-          <CHAN>Chan4</CHAN>
-        </macros>
-        <target>tab</target>
-      </action>
-    </actions>
-    <text>Channel 4</text>
-    <x>1794</x>
-    <y>932</y>
-    <font>
-      <font name="Header1" family="Sans" style="BOLD" size="9.900990099009901">
-      </font>
-    </font>
-    <tooltip>$(actions)</tooltip>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-  </widget>
   <widget type="label" version="2.0.0">
     <name>Label_91</name>
     <text>Fault Clear</text>
@@ -3174,5 +3061,241 @@ Chan 4</text>
     <width>78</width>
     <horizontal_alignment>1</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_44</name>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <description>ch1rst</description>
+        <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_Reset-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch1prk</description>
+        <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_Park-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch2rst</description>
+        <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_Reset-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch2prk</description>
+        <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_Park-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch3rst</description>
+        <pv_name>$(PriSys){$(PSC)}Chan3:DigOut_Reset-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch3prk</description>
+        <pv_name>$(PriSys){$(PSC)}Chan3:DigOut_Park-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch4rst</description>
+        <pv_name>$(PriSys){$(PSC)}Chan4:DigOut_Reset-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>ch4prk</description>
+        <pv_name>$(PriSys){$(PSC)}Chan4:DigOut_Park-SP</pv_name>
+        <value>0</value>
+      </action>
+    </actions>
+    <text>ALL Park, Rst OFF</text>
+    <x>1722</x>
+    <y>11</y>
+    <width>126</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_46</name>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <description>ch1rst</description>
+        <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_Reset-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch1prk</description>
+        <pv_name>$(PriSys){$(PSC)}Chan1:DigOut_Park-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch2rst</description>
+        <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_Reset-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch2prk</description>
+        <pv_name>$(PriSys){$(PSC)}Chan2:DigOut_Park-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch3rst</description>
+        <pv_name>$(PriSys){$(PSC)}Chan3:DigOut_Reset-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch3prk</description>
+        <pv_name>$(PriSys){$(PSC)}Chan3:DigOut_Park-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch4rst</description>
+        <pv_name>$(PriSys){$(PSC)}Chan4:DigOut_Reset-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>ch4prk</description>
+        <pv_name>$(PriSys){$(PSC)}Chan4:DigOut_Park-SP</pv_name>
+        <value>1</value>
+      </action>
+    </actions>
+    <text>ALL Park, Rst ON</text>
+    <x>1722</x>
+    <y>52</y>
+    <width>126</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_47</name>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <description>CH1ON</description>
+        <pv_name>$(PriSys){$(PSC)}Chan1:FaultClear-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>CH2ON</description>
+        <pv_name>$(PriSys){$(PSC)}Chan2:FaultClear-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>CH3ON</description>
+        <pv_name>$(PriSys){$(PSC)}Chan3:FaultClear-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>CH4ON</description>
+        <pv_name>$(PriSys){$(PSC)}Chan4:FaultClear-SP</pv_name>
+        <value>1</value>
+      </action>
+      <action type="write_pv">
+        <description>CH1OFF</description>
+        <pv_name>$(PriSys){$(PSC)}Chan1:FaultClear-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>CH2OFF</description>
+        <pv_name>$(PriSys){$(PSC)}Chan2:FaultClear-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>CH3OFF</description>
+        <pv_name>$(PriSys){$(PSC)}Chan3:FaultClear-SP</pv_name>
+        <value>0</value>
+      </action>
+      <action type="write_pv">
+        <description>CH4OFF</description>
+        <pv_name>$(PriSys){$(PSC)}Chan4:FaultClear-SP</pv_name>
+        <value>0</value>
+      </action>
+    </actions>
+    <text>ALL CH
+FAULT CLEAR</text>
+    <x>1590</x>
+    <width>126</width>
+    <height>38</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_258</name>
+    <text>Current Control
+SetPoint (A)
+Chan 2</text>
+    <x>1476</x>
+    <y>326</y>
+    <width>101</width>
+    <height>54</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Input_44</name>
+    <pv_name>$(PriSys){$(PSC)}Chan2:TenHzBufLen-SP</pv_name>
+    <x>1476</x>
+    <y>460</y>
+    <width>90</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <precision>0</precision>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <actions>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_281</name>
+    <text>Buffer Length</text>
+    <x>1476</x>
+    <y>430</y>
+    <width>101</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Input_43</name>
+    <pv_name>$(PriSys){$(PSC)}Chan2:DAC_SetPt-SP</pv_name>
+    <x>1476</x>
+    <y>380</y>
+    <width>90</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <precision>5</precision>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <actions>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
   </widget>
 </display>
